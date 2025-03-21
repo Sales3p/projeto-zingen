@@ -15,18 +15,17 @@
 
 :root {
   /* colors */
-  --background-color: #09090B;
+  --bg-color: #09090B;
   --surface-color: #18181B;
   --stroke-color: #27272A;
   --text-color-primary: #F4F4F5;
   --text-color-secondary: #A1A1AA;
 
-  --brand-gradient: #FC4A1A #F7B733;
   --brand-color-primary: #F7B733;
   --brand-color-secondary: #FC4A1A;
 
   /* Texts */
-  --font-family:  "Inter", system-ui, sans-serif;
+  --font-family: "Inter", system-ui, sans-serif;
 
   --fw-base: 400;
   --fw-md: 500;
@@ -55,7 +54,7 @@ html {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
 }
 
 h1, h2, h3 {
@@ -80,6 +79,14 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:hover {
+  background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 ul [role="list"] {
